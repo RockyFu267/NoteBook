@@ -4,7 +4,7 @@
 kubectl create sa  fuao-test -n fuao-test
 
 ## 创建role 仅在指定ns fuao-test下能操作的权限
-+ ```
+```
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
@@ -20,7 +20,7 @@ rules:
 ```
 
 ## 创建rolebinding
-+ ```
+```
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
@@ -42,7 +42,7 @@ subjects:
 + kubectl get secret fuao-test-token-nmtjx -n fuao-test -o jsonpath='{.data.token}' | base64 --decode
 
 ## 
-+ ```
+```
 apiVersion: v1
 clusters:
 - cluster:
